@@ -20,3 +20,21 @@
          echo "O funcionario do cpf $funcionarios->cpf do departamento de $funcionarios->departamento foi efetivado no $data->dia/$data->mes/$data->ano com o salario de $funcionarios->salario";
 
     }mostra($funcionarios, $data);
+
+    function recebeAumento($funcionarios){
+         $salario = $funcionarios->salario;
+         $valor = 10;
+         $aumento = $funcionarios->salario + ($salario / 100 * $valor);
+         echo ", recebeu um aumento de 10% e está recebendo R$".$aumento;
+}
+    recebeAumento($funcionarios);
+
+    function calculaGanhoAnual($funcionarios){
+        $salario = $funcionarios->salario;
+        $valor = 10;
+        $aumento = $funcionarios->salario + ($salario / 100 * $valor);
+        $ganho = $aumento * 12;
+        echo "e seu ganho anual agora é de R$".$ganho;
+
+    }
+    calculaGanhoAnual($funcionarios);
